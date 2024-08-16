@@ -1,12 +1,14 @@
-import React from 'react'
-import { Hero } from '../../index'
+import React from "react";
+import { Hero, Services, Trusted } from "../../index";
 
 const Home = () => {
   return (
     <div>
-        <Hero/>
+      <Hero />
+      <Services />
+      <Trusted />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,3 +1,5 @@
+import AllProducts from "./component/allProducts/AllProducts";
+import FeaturedProduct from "./component/featuredProduct/FeaturedProduct";
 import Footer from "./component/footer/Footer";
 import Header from "./component/header/Header";
 import Nav from "./component/header/Nav";
@@ -18,6 +20,8 @@ import SingleProduct from "./pages/singleProduct/SingleProduct";
 
 
 export {
+    AllProducts,
+    FeaturedProduct,
     Services,
     Trusted,
     Hero,

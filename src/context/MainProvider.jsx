@@ -12,6 +12,7 @@ const MainProvider = ({ children }) => {
     isError: false,
     products: [],
     featuredProducts: [],
+    currentPage: 1,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);

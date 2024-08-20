@@ -1,10 +1,12 @@
 import React from "react";
-import { Hero, Services, Trusted } from "../../index";
+import { AllProducts, FeaturedProduct, Hero, Services, Trusted } from "../../index";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <FeaturedProduct/>
+      <AllProducts/>
       <Services />
       <Trusted />
     </div>

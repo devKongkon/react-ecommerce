@@ -19,6 +19,7 @@ import {
   SingleProduct,
 } from "./index";
 import { ThemeProvider } from "styled-components";
+import MainProvider from "./context/MainProvider";
 
 const theme = {
   colors: {
@@ -60,9 +61,11 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <MainProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </MainProvider>
   </>
 );

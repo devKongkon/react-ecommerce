@@ -3,6 +3,16 @@ import useProductContext from "../../hooks/useProductContext";
 
 const FeaturedProduct = () => {
   const { isLoading, featuredProducts, isError } = useProductContext();
+  // console.log(featuredProducts)
+
+
+  const formatCurrency = (price) => {
+    return new Intl.NumberFormat("bn-BD", {
+      style: "currency",
+      currency: "BDT",
+      maximumFractionDigits: 2,
+    }).format(price / 100);
+  };
 
   return (
     <section className="">
@@ -21,12 +31,12 @@ const FeaturedProduct = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 justify-center">
             {featuredProducts.map((product) => (
-              <div key={product.id}>
+              <div key={product.id} >
                 <img className="" src={product.image} alt={product.name} />
-                <div>
+                <div className="mt-10">
                   <h3>{product.name}</h3>
-                  <p>${product.price}</p>
-                  <button>View Details</button>
+                  <p>{formatCurrency(product.price)}</p>
+                
                 </div>
               </div>
             ))}
